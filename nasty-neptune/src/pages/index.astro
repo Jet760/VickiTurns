@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import BlogThumbnail from '../components/BlogThumbnail.astro';
+import TalkThumbnail from '../components/TalkThumbnail.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Header />
+	 <h1>introduction</h1>
+	 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda explicabo voluptate recusandae quod modi vel perspiciatis quis, tempora eius beatae quaerat exercitationem dolore! Optio sequi facilis perspiciatis, deleniti praesentium maxime.</p>
+	 <img src="https://yt3.googleusercontent.com/Bkfrmx8iNXaTx-Zw-_Ch4iHpkgr4trxCcfkrIDmDmAwoC0VCdxPkSyd6e37G4oTUwMV9vcR-4A=s900-c-k-c0x00ffffff-no-rj"/>
+	  <h2>My most recent blog posts</h2>
+	  <div>
+		<BlogThumbnail title="Title" date="05/02/2000" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBmabR2XrzaM8V06VwB7gqLWaMpkE912FnlsssJ0KcyPrrFx6OSTavrBMtyZ3x8qAj7sw&usqp=CAU" blurb="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda explicabo voluptate recusandae quod modi vel perspiciatis quis, tempora eius beatae quaerat exercitationem dolore! Optio sequi facilis perspiciatis, deleniti praesentium maxime."/>
+	  </div>
+	  <h2>My latest talks</h2>
+	  <div>
+		<TalkThumbnail title="Title" date="05/02/2000" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSavyLUUReyjRHinhpdrODk7ytyAQ1ngYHZ_Q&s"/>
+	  </div>
 </Layout>
+
+<style>
+	img{
+		max-height: 200px;
+	}
+</style>
